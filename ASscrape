@@ -1,0 +1,16 @@
+import requests
+from lxml import html
+import time
+
+url = requests.get('https://asseenonadultswim.com/')
+tree = html.fromstring(url.content)
+
+items = tree.xpath('//div[@class="grid-view-item__title cb_gridItemHeading cb_gridItemText cb_gridItem--title "]/text()')
+descriptions = tree.xpath('//div[@class="cb_gridItem--desc "]/text()')
+price = tree.xpath('//span[@class="product-price__price"]/text()')
+
+print("In stock items on asseenodultswim.com for "+time.ctime())
+
+dictionary = dict(zip(items, price))
+for key, value in dictionary.items() :
+    print (key, value)
