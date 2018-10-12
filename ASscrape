@@ -12,8 +12,7 @@ descriptions = tree.xpath('//div[@class="cb_gridItem--desc "]/text()')
 price = tree.xpath('//span[@class="product-price__price"]/text()')
 
 print("In stock items on asseenodultswim.com for "+time.ctime())
-print("-"*25
-      )
+print("-"*25)
 
 n = -1
 dictionary = dict(zip(items, price))
