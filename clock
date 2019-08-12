@@ -10,8 +10,8 @@ login = browser.find_element_by_id("LoginName")
 password = browser.find_element_by_id("LoginPassword")
 
 client.send_keys("094312049933")
-login.send_keys("jmendez")
-password.send_keys("Hondadelsol22!")
+login.send_keys("LOGIN_NAME_HERE")
+password.send_keys("PASSWORD_HERE")
 
 browser.find_element_by_name("LoginBtn").click()
 
